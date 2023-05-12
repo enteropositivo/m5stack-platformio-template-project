@@ -1,10 +1,10 @@
-# PlatformIO IDE 向け M5Stack 定型コード環境
+# PlatformIO M5Stack
 
-[Arduino IDE](https://www.arduino.cc/en/software) 環境のように [PlatformIO IDE](https://platformio.org/platformio-ide) 環境でも `setup()`と`loop()`の中身を書いてすぐにコンパイルして実行できる環境です。
+[Arduino IDE] Al igual que el entorno (https://www.arduino.cc/en/software) [IDE de Arduino] Al igual que el entorno (https://www.arduino.cc/en/software), el entorno [PlatformIO IDE]  [PlatformIO IDE](https://platformio.org/platformio-ide) se puede compilar y ejecutar inmediatamente escribiendo el contenido de 'setup()' y 'loop()'.
 
-## 対応機種
+## Dispositivos M5Stack compatibles
 
-| 機種名                    | 環境名                                                         | 備考                                                                                                     |
+| Modelo                    | Entorno                                                         | Notas                                                                                                     |
 | :------------------------ | :------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | M5Stack BASIC             | env:m5stack-basic                                              |                                                                                                          |
 | M5Stack Fire              | env:m5stack-fire                                               |                                                                                                          |
@@ -13,21 +13,21 @@
 | M5Stack CORES3             | env:m5stack-cores3-m5unified                                   | [M5Unified](https://github.com/m5stack/M5Unified) を使用                                                                                                         |
 | M5StickC                  | env:m5stack-c                                                  |                                                                                                          |
 | M5StickC Plus             | env:m5stack-c-plus                                             |                                                                                                          |
-| M5ATOM Lite/Matrix/Echo/U | env:m5stack-atom <br> env:m5stack-atom-m5unified               | 公式ライブラリを使用<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用                         |
-| M5ATOMS3                  | env:m5stack-atoms3 <br> env:m5stack-atoms3-m5unified           | 公式ライブラリを使用<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用。USB CDC On Boot が有効 |
-| M5ATOMS3 Lite             | env:m5stack-atoms3-lite <br> env:m5stack-atoms3-lite-m5unified | 公式ライブラリを使用<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用。USB CDC On Boot が有効 |
+| M5ATOM Lite/Matrix/Echo/U | env:m5stack-atom <br> env:m5stack-atom-m5unified               | Utilizar la biblioteca oficial使用<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用                         |
+| M5ATOMS3                  | env:m5stack-atoms3 <br> env:m5stack-atoms3-m5unified           | Utilizar la biblioteca oficial<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用。USB CDC On Boot が有効 |
+| M5ATOMS3 Lite             | env:m5stack-atoms3-lite <br> env:m5stack-atoms3-lite-m5unified | Utilizar la biblioteca oficial<br>[M5Unified](https://github.com/m5stack/M5Unified) を使用。USB CDC On Boot が有効 |
 | M5Stack CoreInk           | env:m5stack-core-ink                                           |                                                                                                          |
 | M5Stack Paper             | env:m5stack-paper                                              |                                                                                                          |
 
-## 事前準備
+## Preaparación
 
-### コード整形の設定
+### Configuración del proyecto
 
-コードの整形は`.vscode/settings.json`で`"C_Cpp.clang_format_style": "file"`にしているため，`.clang-format`で設定できます。ご自身の好きな設定に変更してください。
+El formato se establece en `.vscode/settings.json` `"C_Cpp.clang_format_style": "file"` `.clang-format` puedes cambiarlo a gusto
 
-### 環境設定
+### Preferencias
 
-#### 接続ポートの設定
+#### Configuración del puerto de conexión
 
 `platformio.ini`の`[platformio]`セクションにある`upload_port`と`monitor_port`のコメントを外し，`upload_port`に設定するポートを実機が接続しているポートに変更します。
 
